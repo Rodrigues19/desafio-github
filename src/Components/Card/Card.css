@@ -1,0 +1,56 @@
+.card {
+    
+    height: 600px;
+    width: 800px;
+    border-radius: 50px;
+    background: rgb(255, 255, 255);
+    position: relative;
+    left: 50vh;
+    padding: 50px;
+    top: 100px;
+    box-shadow: 2px 2px 2px 3px rgb(170, 170, 172);
+
+}
+
+.card-img {
+    position: relative;
+    left: 5vh;
+    border-radius: 100px;
+    height: 150px;
+    width: 150px;
+}
+
+.informations {
+    position: relative;
+    left: 30vh;
+    bottom: 17vh;
+
+}
+
+.biography {
+    position: relative;
+    bottom: 10vh;
+}
+
+.cardm {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: relative;
+    
+    
+}
+
+.cardmenor {
+    border: solid 1px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*position: relative;
+    left: 30vh;*/

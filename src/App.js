@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Header from "./Components/Header/Header";
+import Card from "./Components/Card/Card";
+import axios from"axios";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  constructor(props){
+    super(props);
+      this.state = {
+        search: "",
+        filter: "users"
+      }
+    this.setSearch = this.setSearch.bind(this);
+  }
 
+  setSearch = (value) => {
+    this.setState({ search: value  });
+    
+    console.log(this.state.search)
+  }
+
+  render(){
+    return(
+      <div>
+        <Header setSearch={this.setSearch} />
+        <Card search={this.state.search}/>
+      </div>
+    );
+  }
+}
 export default App;
